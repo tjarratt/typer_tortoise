@@ -1,5 +1,11 @@
 var App = Em.Application.create();
 
+Em.LOG_BINDINGS = true;
+
+App.models = {};
+App.controllers = {};
+App.views = {};
+
 //
 //  jQuery addons
 //

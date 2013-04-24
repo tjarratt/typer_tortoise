@@ -8,7 +8,7 @@
   <!-- white space becomes super-significant in this area -->
   <div class="type-panel" tabindex="0"><span class="before-cursor">{{text.beforeCursor}}</span><span {{bindAttr class=":type-cursor text.hasMistakes"}}>{{{text.renderedCursor}}}</span>{{text.afterCursor}}</div>
 
-  {{#view App.FocusNag}}Click the text to start typing!{{/view}}
+  {{#view App.views.FocusNag}}Click the text to start typing!{{/view}}
 </script>
 
 <script type="text/x-handlebars" data-template-name="wpm-display">
@@ -25,7 +25,7 @@
     <h3>Your Scores</h3>
     <ul>
     {{#each App.scoresController}}
-      {{#view App.ScoreItemView contentBinding="this"}}
+      {{#view App.views.ScoreItemView contentBinding="this"}}
         <li>
         {{#with view.content}}
           <a href="/snippets/{{unbound snippet_id}}">Snippet {{snippet_id}}</a>: <strong>{{wpm}}</strong> wpm, <strong>{{accuracy}}%</strong> accurate.
